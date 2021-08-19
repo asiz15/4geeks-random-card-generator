@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: #2d3436;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card, .card-back{
+    width: 270px;
+    height: 400px;
+    background: #fff;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10vh;
+}
+
+.card-back{
+    background: red;
+}
+
+.card > .card-value{
+    font-size: 6em;
+}
+
+.card > .top-left{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.card > .bottom-right{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.card > .symbol{
+    font-size: 4em;
+    padding: 10px 20px;
+}
+
+#reRoll{
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #01a3a4;
+    color: #fff;
+    font-size: 1.3em;
+    cursor: pointer;
+}
