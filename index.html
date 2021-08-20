@@ -9,10 +9,15 @@
 </head>
 <body>
     <div class="container">
+        <div id="timer">Next re roll in: <span id="timerValue">10</span></div>
+        <div class="card-dimensions">
+            <input id="cardWidth" type="number" placeholder="width">
+            <input id="cardHeight" type="number" placeholder="height">
+        </div>
         <div id="card" class="card">
-            <div class="top-left symbol">♦</div>
-            <div class="bottom-right symbol">♦</div>
-            <div id="cardValue" class="card-value">K</div>
+            <div class="top-left symbol"></div>
+            <div class="bottom-right symbol"></div>
+            <div id="cardValue" class="card-value"></div>
         </div>
         <button id="reRoll">Re roll</button>
     </div>

@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 'Hearts, Spades, Clubs and Diamonds'
+    let timer = 10
+    const timerRender = document.getElementById('timerValue')
 
     const cardTypes = [
         {
@@ -69,10 +71,34 @@ document.addEventListener('DOMContentLoaded', () => {
             symbol.innerHTML = card.type.symbol
             symbol.style.color = card.type.color
         })
+
+        initTimer()
+    }
+    const initTimer = () => {
+
+       const interval =  setInterval(() => {
+            timer--
+            timerRender.innerHTML = timer
+            if(timer === 0 ){
+                clearInterval(interval)
+                generateCard()
+                timer = 10
+            }
+        }, 1000);
     }
     
     document.getElementById('reRoll').addEventListener('click', () => {
         generateCard()
     })
+
+    document.getElementById('cardWidth').addEventListener('change', function(e){
+        card.style.width = e.target.value + 'px'
+    })
+
+    document.getElementById('cardHeight').addEventListener('change', function(e){
+        card.style.height = e.target.value + 'px'
+    })
+    
+    generateCard()
     
 });
