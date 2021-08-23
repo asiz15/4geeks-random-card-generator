@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 'Hearts, Spades, Clubs and Diamonds'
     let timer = 10
+    let interval 
     const timerRender = document.getElementById('timerValue')
 
     const cardTypes = [
@@ -76,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     const initTimer = () => {
 
-       const interval =  setInterval(() => {
+       interval = setInterval(() => {
             timer--
             timerRender.innerHTML = timer
             if(timer === 0 ){
@@ -88,7 +89,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     document.getElementById('reRoll').addEventListener('click', () => {
+        clearInterval(interval)
         generateCard()
+        timer = 10
     })
 
     document.getElementById('cardWidth').addEventListener('change', function(e){
